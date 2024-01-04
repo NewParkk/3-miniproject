@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import common.util.DBUtil;
 import noticeBoard.dto.NoticeBoardDTO;
@@ -70,50 +71,39 @@ public class BoardDAO {
 	}
 	
 	// getBoardByBoardId (글 하나 검색)
+		public static NoticeBoardDTO getBoardByBoardId(String board_id) throws SQLException {
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			ResultSet rset = null;
+			NoticeBoardDTO board = null;
+			
+			String sql = "select * from notice_board where notice_id = ?";
+			
+			try {
+				con = DBUtil.getConnection();
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, "notice_id");
+				rset = pstmt.executeQuery();
+				
+				if(rset.next()) {
+					board = new NoticeBoardDTO(rset.getInt("notice_id"),
+													rset.getString("notice_title"),
+													rset.getString("notice_date"),
+													rset.getString("notice_content"),
+													rset.getString("user_id"));
+				}
+				return board;
+				
+			} finally {
+				DBUtil.close(rset, pstmt, con);
+			}
+		}
+			
 	
-	
-	
-	
-	
-	
-	
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
 	
-		
 		
 		
 		
