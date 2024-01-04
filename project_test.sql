@@ -1,3 +1,7 @@
+USE login;
+
+select * from user;
+
 insert into user values("hj", "혜진", 1234);
 insert into user values("dw", "대원", 4567);
 insert into user values("hc", "현철", 7894);
