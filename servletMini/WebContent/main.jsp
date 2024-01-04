@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<title>JSP 게시판 웹사이트</title>
+<title>게시판</title>
 </head>
 <body>
 	<%
@@ -75,10 +75,10 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>1</td>					
-						<td>안녕하세요</td>					
-						<td>홍길동</td>					
-						<td>2017-05-04</td>			
+						<td>rownum</td>					
+						<td>notice_title</td>					
+						<td>user_id</td>					
+						<td>notice_date</td>			
 					</tr>
 				</tbody>
 			</table>
