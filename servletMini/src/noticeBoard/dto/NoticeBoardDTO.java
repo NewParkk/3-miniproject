@@ -1,17 +1,17 @@
 package noticeBoard.dto;
 
 public class NoticeBoardDTO {
-	private String noticeId;
+	private Integer noticeId;
 	private String noticeTitle;
 	private String noticeDate;
 	private String noticeContent;
-	private Integer userId;
+	private String userId;
 	
 	
-	public NoticeBoardDTO() {}
 	
-	public NoticeBoardDTO(String noticeId, String noticeTitle, String noticeDate, String noticeContent,
-			Integer userId) {
+	
+	public NoticeBoardDTO(Integer noticeId, String noticeTitle, String noticeDate, String noticeContent,
+			String userId) {
 		super();
 		this.noticeId = noticeId;
 		this.noticeTitle = noticeTitle;
@@ -19,37 +19,80 @@ public class NoticeBoardDTO {
 		this.noticeContent = noticeContent;
 		this.userId = userId;
 	}
-	public String getNoticeId() {
+
+
+
+
+	public Integer getNoticeId() {
 		return noticeId;
 	}
-	public void setNoticeId(String noticeId) {
+
+
+
+
+	public void setNoticeId(Integer noticeId) {
 		this.noticeId = noticeId;
 	}
+
+
+
+
 	public String getNoticeTitle() {
 		return noticeTitle;
 	}
+
+
+
+
 	public void setNoticeTitle(String noticeTitle) {
 		this.noticeTitle = noticeTitle;
 	}
+
+
+
+
 	public String getNoticeDate() {
 		return noticeDate;
 	}
+
+
+
+
 	public void setNoticeDate(String noticeDate) {
 		this.noticeDate = noticeDate;
 	}
+
+
+
+
 	public String getNoticeContent() {
 		return noticeContent;
 	}
+
+
+
+
 	public void setNoticeContent(String noticeContent) {
 		this.noticeContent = noticeContent;
 	}
-	public Integer getUserId() {
+
+
+
+
+	public String getUserId() {
 		return userId;
 	}
-	public void setUserId(Integer userId) {
+
+
+
+
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	
+
+
+
+
 	@Override
 	public String toString() {
 		return "NoticeBoardDTO [noticeId=" + noticeId + ", noticeTitle=" + noticeTitle + ", noticeDate=" + noticeDate
