@@ -5,6 +5,7 @@ public class QuestionDTO {
 	private String questionTitle;
 	private String questionDate;
 	private String questionContent;
+	private String userId;
 	
 	
 	
