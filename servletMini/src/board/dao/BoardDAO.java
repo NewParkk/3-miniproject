@@ -72,66 +72,46 @@ public class BoardDAO {
 	// getBoardByBoardId (글 하나 검색)
 	
 	
-	
-	
-	
-	
-	
-	
+		
+	// insertBoard(새 글 생성)
 		
 		
 		
+	//updateBoard (글 수정)
+		public static boolean updateBoard(NoticeBoardDTO board) throws SQLException {
+		    Connection con = null;
+		    PreparedStatement pstmt = null;
+
+		    int result = 0;
+
+		    String sql = "UPDATE notice_board SET notice_title = ?, notice_date = ?, notice_content = ? WHERE notice_id = ?";
+
+		    try {
+		        con = DBUtil.getConnection();
+
+		        pstmt = con.prepareStatement(sql);
+
+		        pstmt.setString(1, board.getNoticeTitle());    
+		        pstmt.setString(2, board.getNoticeDate());     
+		        pstmt.setString(3, board.getNoticeContent()); 
+		        pstmt.setInt(4, board.getNoticeId());           
+
+		        result = pstmt.executeUpdate();
+
+		        if (result != 0) {
+		            return true;
+		        }
+
+		    } finally {
+		        DBUtil.close(pstmt, con);
+		    }
+
+		    return false;
+		}
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-		
-		
-		
-		
-		
-		// insertBoard(새 글 생성)
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		//updateBoard (글 수정)
-		
-		
-		// deleteBoard  (글 삭제)
+	// deleteBoard  (글 삭제)
 		
 	
 }
