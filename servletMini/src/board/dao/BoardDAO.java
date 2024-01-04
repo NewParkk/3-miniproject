@@ -11,7 +11,7 @@ import noticeBoard.dto.NoticeBoardDTO;
 
 public class BoardDAO {
 	
-	// get notice board List (¸ğµç ±Û ¸ñ·Ï °Ë»ö)
+	// get notice board List (ëª¨ë“  ê¸€ ëª©ë¡ ê²€ìƒ‰)
 	public static ArrayList<NoticeBoardDTO> getBoardList() throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -40,7 +40,7 @@ public class BoardDAO {
 	}
 		
 		
-		// get notice board By user_id (À¯Àú ¾ÆÀÌµğ·Î ÀÛ¼º ±Û ¸ñ·Ï °Ë»ö)
+		// get notice board By user_id (ìœ ì € ì•„ì´ë””ë¡œ ì‘ì„± ê¸€ ëª©ë¡ ê²€ìƒ‰)
 		public static ArrayList<NoticeBoardDTO> getBoardListByUserId(String user_id) throws SQLException {
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -69,7 +69,7 @@ public class BoardDAO {
 			}
 	}
 	
-	// getBoardByBoardId (±Û ÇÏ³ª °Ë»ö)
+	// getBoardByBoardId (ê¸€ í•˜ë‚˜ ê²€ìƒ‰)
 	
 	
 	
@@ -118,7 +118,7 @@ public class BoardDAO {
 		
 		
 		
-		// insertBoard(»õ ±Û »ı¼º)
+		// insertBoard(ìƒˆ ê¸€ ìƒì„±)
 		
 		
 		
@@ -128,10 +128,10 @@ public class BoardDAO {
 		
 		
 		
-		//updateBoard (±Û ¼öÁ¤)
+		//updateBoard (ê¸€ ìˆ˜ì •)
 		
 		
-		// deleteBoard (±Û »èÁ¦)
+		// deleteBoard  (ê¸€ ì‚­ì œ)
 		
 	
 }
