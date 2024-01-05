@@ -47,14 +47,14 @@ public class InsertBoardController extends HttpServlet {
 				response.sendRedirect(url);
 				return;
 			}else {
-				request.setAttribute("error", "±Û ÀÛ¼º ½ÇÆÐ");
+				request.setAttribute("error", "ê¸€ ìž‘ì„± ì‹¤íŒ¨");
 				request.getRequestDispatcher(url).forward(request, response);
 			}
 			
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
-			request.setAttribute("error", "±Û ÀÛ¼º ½ÇÆÐ" + e.getMessage());
+			request.setAttribute("error", "ê¸€ ìž‘ì„± ì˜¤ë¥˜" + e.getMessage());
 			request.getRequestDispatcher(url).forward(request, response);
 		}
 		
