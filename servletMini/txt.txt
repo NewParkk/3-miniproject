@@ -64,3 +64,28 @@ login.jsp
   > getBoardList.jsp
   > insertBoard.jsp
   > updateBoard.jsp
+
+
+
+
+
+
+글쓸때 작성자 변안됨 o
+
+
+
+
+
+---------------------------------
+글제목 빈값 잡아내기
+게시판 글번호 수정
+삭제기능 수정
+업데이트기능
+
+
+
+
+
+
+
+

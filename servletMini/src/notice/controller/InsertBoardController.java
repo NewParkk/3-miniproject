@@ -18,23 +18,31 @@ public class InsertBoardController extends HttpServlet {
        
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String testUserId = "hj";
-		request.getSession().setAttribute("user_id", testUserId);
 		
-		response.setCharacterEncoding("UTF-8");
-		request.setCharacterEncoding("UTF-8");
 		String noticetitle = request.getParameter("boardtitle");
 		String noticecontent = request.getParameter("boardcontent");
 		
 		HttpSession session = request.getSession();
-	    String userId = (String) session.getAttribute("user_id");
+	    String userId = (String) session.getAttribute("userId");
 		
 		String url = "errors.jsp";
 		
-		System.out.println(noticetitle);
-		System.out.println(noticecontent);
+//		System.out.println(noticetitle);
+//		System.out.println(noticecontent);
 		
 		boolean result = false;
+		
+		if (noticetitle == null || noticetitle.equals("")) {
+			request.setAttribute("error", "제목을 입력해 주세요");
+			request.getRequestDispatcher(url).forward(request, response);
+		}
+				
+		else if (noticecontent == null || noticecontent.equals("")) {
+			request.setAttribute("error", "내용을 입력해 주세요");
+			request.getRequestDispatcher(url).forward(request, response);
+		}
+		
+		
 		
 		try {
 			
@@ -58,8 +66,7 @@ public class InsertBoardController extends HttpServlet {
 			request.getRequestDispatcher(url).forward(request, response);
 		}
 		
-	
+		
 
 	}
-
 }
