@@ -63,6 +63,35 @@ public class UserDAO {
 		
 		return false;
 	}
+
+	public static UserDTO getUserByUserIdandPassword(String userId, String password) throws SQLException {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		UserDTO user = null;
+		
+		String sql = "SELECT * FROM user WHERE user_id = ? AND password = ?";
+		
+		try {
+			con = DBUtil.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, userId);
+			pstmt.setString(2, password);
+			rset = pstmt.executeQuery();
+
+			if(rset.next()) {
+				user = new UserDTO(rset.getString("user_id"),
+									rset.getString("user_name"),
+									rset.getString("password"));
+			}
+			return user;
+			
+		} finally {
+			DBUtil.close(rset, pstmt, con);
+		}
+	
+	}
 		
 }
 	
