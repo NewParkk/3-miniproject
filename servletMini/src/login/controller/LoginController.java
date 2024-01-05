@@ -44,7 +44,7 @@ public class LoginController extends HttpServlet {
 				session.setAttribute("userId", user.getUserId());
 				session.setAttribute("password", user.getPassword());
 				
-				url = "main.jsp";
+				url = "getboardlist.do";
 				response.sendRedirect(url);
 				
 			}

@@ -21,9 +21,9 @@ body, html {height: 100%}
   background-size: cover;
 }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-topleft w3-padding-large w3-xlarge"  style="opacity: 0.7;">
