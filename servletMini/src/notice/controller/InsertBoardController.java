@@ -42,30 +42,30 @@ public class InsertBoardController extends HttpServlet {
 			request.getRequestDispatcher(url).forward(request, response);
 		}
 		
-		
-		
-		try {
+		else {
 			
-			result = BoardDAO.insertBoard(noticetitle, noticecontent, userId);
-		
-			System.out.println(result);
+			try {
+				
+				result = BoardDAO.insertBoard(noticetitle, noticecontent, userId);
 			
-			if (result) {
-				url = "getboardlist.do";
-				response.sendRedirect(url);
-				return;
-			}else {
-				request.setAttribute("error", "글 작성 실패");
+				System.out.println(result);
+				
+				if (result) {
+					url = "getboardlist.do";
+					response.sendRedirect(url);
+					return;
+				}else {
+					request.setAttribute("error", "글 작성 실패");
+					request.getRequestDispatcher(url).forward(request, response);
+				}
+				
+			
+			} catch (SQLException e) {
+				e.printStackTrace();
+				request.setAttribute("error", "글 작성 오류" + e.getMessage());
 				request.getRequestDispatcher(url).forward(request, response);
 			}
-			
-		
-		} catch (SQLException e) {
-			e.printStackTrace();
-			request.setAttribute("error", "글 작성 오류" + e.getMessage());
-			request.getRequestDispatcher(url).forward(request, response);
 		}
-		
 		
 
 	}

@@ -19,7 +19,7 @@
                 <tbody>
                     <c:forEach var="board" items="${requestScope.boardList}">
                         <tr>
-                            <td class="col-1" style="text-align: center;">${board.noticeId}</td>
+                            <td class="col-1" style="text-align: center;">${board.boardNum}</td>
                             <td><a href="getboard.do?noticeId=${board.noticeId}">${board.noticeTitle}</a></td>
                             <td>${board.noticeDate}</td>
                             <td>${board.userId}</td>
