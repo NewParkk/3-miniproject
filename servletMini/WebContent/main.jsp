@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="../../header.jsp" %>
+<%@ include file="../css/insertUser.jsp" %>
 
 	<div class="container">
 		<div class="row">
