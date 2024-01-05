@@ -71,7 +71,7 @@ public class UserDAO {
 		
 		UserDTO user = null;
 		
-		String sql = "SELECT * FROM user WHERE user_id = ? & password = ?";
+		String sql = "SELECT * FROM user WHERE user_id = ? AND password = ?";
 		
 		try {
 			con = DBUtil.getConnection();
