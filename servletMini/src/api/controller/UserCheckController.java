@@ -19,7 +19,7 @@ public class UserCheckController extends HttpServlet {
 
    public UserCheckController() {
    }
-
+   // 
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       String userId = request.getParameter("userId");
       UserDTO user = null;

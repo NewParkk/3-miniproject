@@ -35,7 +35,6 @@ public class InsertUserController extends HttpServlet {
 			if(result) {
 				url = "login.jsp";
 				response.sendRedirect(url);
-				System.out.println("데이터는 들어간");
 				return;
 			} else {
 				request.setAttribute("error", "회원가입 실패");
