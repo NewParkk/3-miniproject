@@ -26,6 +26,8 @@ public class BoardDAO {
 			pstmt = con.prepareStatement(sql);
 			rset = pstmt.executeQuery();
 			
+			boardList = new ArrayList<NoticeBoardDTO>();
+			
 			while(rset.next()) {
 				boardList.add(new NoticeBoardDTO(rset.getInt("notice_id"),
 												rset.getString("notice_title"),
