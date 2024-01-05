@@ -12,7 +12,7 @@ import noticeBoard.dto.NoticeBoardDTO;
 
 public class BoardDAO {
 	
-	// get notice board List (모든 글 목록 검색)
+	// get notice board List ()
 	public static ArrayList<NoticeBoardDTO> getBoardList() throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -41,7 +41,7 @@ public class BoardDAO {
 	}
 		
 		
-		// get notice board By user_id (유저 아이디로 작성 글 목록 검색)
+		// get notice board By user_id ()
 		public static ArrayList<NoticeBoardDTO> getBoardListByUserId(String user_id) throws SQLException {
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -70,7 +70,7 @@ public class BoardDAO {
 			}
 	}
 	
-	// getBoardByBoardId (글 하나 검색)
+	// getBoardByBoardId ()
 
 		public static NoticeBoardDTO getBoardByBoardId(String board_id) throws SQLException {
 			Connection con = null;
@@ -99,26 +99,25 @@ public class BoardDAO {
 				DBUtil.close(rset, pstmt, con);
 			}
 }
-	// insertBoard(새 글 생성)
+	// insertBoard()
 
 	
-	public static boolean insertBoard(NoticeBoardDTO noticeboard) throws SQLException {	
+	public static boolean insertBoard(String boardtitle, String boardcontent, String userid) throws SQLException {	
 		Connection con = null;
 		PreparedStatement pstmt = null;
 
 		int result = 0;
 		
-		String sql =  "INSERT INTO notice_board VALUES (?, ?, ?, ?, ?)";
+		String sql =  "INSERT INTO notice_board(notice_title, notice_date, notice_content, user_id)"
+					+ "VALUES (?, CURRENT_TIMESTAMP, ?, ?)";
 		
 		try {
 			con = DBUtil.getConnection();
 		
 			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, noticeboard.getNoticeId());
-			pstmt.setString(2, noticeboard.getNoticeTitle());
-			pstmt.setString(3, noticeboard.getNoticeContent());
-			pstmt.setString(4, noticeboard.getNoticeDate());
-			pstmt.setString(5, noticeboard.getUserId());
+			pstmt.setString(1, boardtitle);
+			pstmt.setString(2, boardcontent);
+			pstmt.setString(3, userid);
 		
 		result = pstmt.executeUpdate();
 		if (result != 0) {
@@ -130,27 +129,17 @@ public class BoardDAO {
 		return false;
 	}
 		
-	//updateBoard (글 수정)
-		
+	
+	
+	
 
-	// deleteBoard  (글 삭제)
-
-		
-		// insertBoard(새 글 생성)
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		//updateBoard (글 수정)
-		
-		
-		// deleteBoard  (글 삭제)
-
-		
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
