@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import user.dao.UserDAO;
 import user.dto.UserDTO;
 
-@WebServlet({"/api/getUser"})
+@WebServlet("/api/getId")
 public class UserCheckController extends HttpServlet {
    private static final long serialVersionUID = 1L;
 
@@ -21,11 +21,11 @@ public class UserCheckController extends HttpServlet {
    }
    // 
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      String userId = request.getParameter("userId");
+      String id = request.getParameter("getId");
       UserDTO user = null;
       PrintWriter out = null;
       try {
-    	 user = UserDAO.getUserByUserId(userId);
+    	 user = UserDAO.getUserByUserId(id);
          response.setContentType("application/json; charset=UTF-8");
          System.out.println(user);
          out = response.getWriter();
