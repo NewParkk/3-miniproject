@@ -26,6 +26,8 @@ public class BoardDAO {
 			pstmt = con.prepareStatement(sql);
 			rset = pstmt.executeQuery();
 			
+			boardList = new ArrayList<NoticeBoardDTO>();
+			
 			while(rset.next()) {
 				boardList.add(new NoticeBoardDTO(rset.getInt("notice_id"),
 												rset.getString("notice_title"),
@@ -83,7 +85,7 @@ public class BoardDAO {
 			try {
 				con = DBUtil.getConnection();
 				pstmt = con.prepareStatement(sql);
-				pstmt.setString(1, "notice_id");
+				pstmt.setString(1, board_id);
 				rset = pstmt.executeQuery();
 				
 				if(rset.next()) {
