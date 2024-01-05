@@ -22,7 +22,7 @@
                             <td class="col-1" style="text-align: center;">${board.noticeId}</td>
                             <td><a href="getboard.do?noticeId=${board.noticeId}">${board.noticeTitle}</a></td>
                             <td>${board.noticeDate}</td>
-                            <td>${board.userId}</td>                 
+                            <td>${board.userId}</td>
                         </tr>
                     </c:forEach>
                 </tbody>

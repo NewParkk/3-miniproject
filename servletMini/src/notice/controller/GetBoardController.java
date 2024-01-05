@@ -20,27 +20,27 @@ public class GetBoardController extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		String noticeId = request.getParameter("noticeId");
-		
+//		System.out.println(noticeId);
 		NoticeBoardDTO board = null;
 		
 		try {
 			board = BoardDAO.getBoardByBoardId(noticeId);
-
 			if (board != null) {
 				request.setAttribute("board", board);
+				System.out.println(board.getNoticeContent());
 				
-				url = "getboard.jsp";
+				url = "getBoard.jsp";
 				
 				request.getRequestDispatcher(url).forward(request, response);
 				
 			}else {
-				request.setAttribute("error", "Á¸ÀçÇÏÁö ¾Ê´Â ºÎ¼­");
+				request.setAttribute("error", "ê²Œì‹œë¬¼ ì •ë³´ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 				request.getRequestDispatcher(url).forward(request, response);
 			}
 	
 		
 		} catch (SQLException e) {
-			request.setAttribute("error", "Á¸ÀçÇÏÁö ¾Ê´Â ºÎ¼­");
+			request.setAttribute("error", "ê²Œì‹œë¬¼ ì •ë³´ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			request.getRequestDispatcher(url).forward(request, response);
 		}
 		

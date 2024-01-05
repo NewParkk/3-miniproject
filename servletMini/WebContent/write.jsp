@@ -17,11 +17,10 @@
 		<!-- 버튼 -->
 		<div style="width: 100%; text-align: right; margin-top: 20px;">
 			<button type="submit" class="btn btn-primary">글쓰기</button>
-			<button class="btn btn-light" style="border: 1px solid black;">목록</button>
+			<button type="button" class="btn btn-light" style="border: 1px solid black;" onclick="goToBoardList()">목록</button>
 		</div>
 	</form>
 </div>
-
 <script type="text/javascript">
 function checkData() {
     let insertForm = document.getElementById('insertForm');
@@ -29,10 +28,12 @@ function checkData() {
     if (insertForm.boardtitle.value === "" || insertForm.boardcontent.value === "") {
         return false;
     }
-    
     return true;
 }	
 
+function goToBoardList() {
+    location.href = 'getboardlist.do';
+  }
 </script>
 	
 <%@ include file="../../footer.jsp" %>

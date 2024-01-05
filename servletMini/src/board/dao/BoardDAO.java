@@ -85,7 +85,7 @@ public class BoardDAO {
 			try {
 				con = DBUtil.getConnection();
 				pstmt = con.prepareStatement(sql);
-				pstmt.setString(1, "notice_id");
+				pstmt.setString(1, board_id);
 				rset = pstmt.executeQuery();
 				
 				if(rset.next()) {

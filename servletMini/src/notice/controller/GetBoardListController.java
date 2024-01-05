@@ -26,14 +26,14 @@ public class GetBoardListController extends HttpServlet {
 				request.setAttribute("boardList", boardList);
 				request.getRequestDispatcher("getBoardList.jsp").forward(request, response);
 			}else {
-				request.setAttribute("error", "°Ô½Ã±Û ¸ñ·Ï Á¶È¸ ºÒ°¡");
+				request.setAttribute("error", "ê¸€ ëª©ë¡ì„ ë¶ˆëŸ¬ì˜¬ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 				request.getRequestDispatcher("errors.jsp").forward(request, response);
 			}
 			
 
 		
 		} catch (SQLException e) {
-			request.setAttribute("error", "°Ô½Ã±Û ¸ñ·Ï Á¶È¸ ºÒ°¡");
+			request.setAttribute("error", "ê¸€ ëª©ë¡ì„ ë¶ˆëŸ¬ì˜¬ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			request.getRequestDispatcher("errors.jsp").forward(request, response);
 		}
 	
