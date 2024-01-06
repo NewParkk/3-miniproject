@@ -13,6 +13,25 @@
 
 <style>
 	.mt20 {margin-top:20px;}
+	#footer {
+			width: 100%;
+			height: 150px;
+			bottom: 0px;
+			position: absolute;
+			background-color: #273c75;
+			padding: 20px;
+	}
+	#footer a {
+			display: inline-block;
+			margin: 0 20px 1px 20px;
+			color: #fff; font-size: 15px;
+			text-decoration: none;
+	}
+	#footer span {
+			margin: 0 20px;
+			color: #fff;
+	}
+	
 </style>
 
 </head>
@@ -33,11 +52,8 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item active"> <!-- 여기안바꿈 -->
-					<a class="nav-link active" href="main.jsp">메인</a>
-				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="bbs.jsp">게시판</a>
+					<a class="nav-link" href="getBoardList.jsp">게시판</a>
 				</li>
 			</ul>
 			<%

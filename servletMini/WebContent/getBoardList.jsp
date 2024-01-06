@@ -3,7 +3,7 @@
 
 <div class="container">
 	
-    <h2 style="width: 100%; text-align: left; margin-top: 20px;">게시판</h2>
+    <h2 style="width: 100%; text-align: left; margin-top: 20px;">메인게시판</h2>
     
     <div class="row">
         <div class="table-responsive" style="width: 100%;">

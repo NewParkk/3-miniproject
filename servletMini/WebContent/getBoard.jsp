@@ -3,6 +3,10 @@
 <%@ include file="../../header.jsp" %>
 
 <div class="container">
+	<div style="margin: 20px 0;">
+		<span style="width: 10%;">  </span>
+		<h2 style="display: inline;">메인게시판</h2><hr/>
+	</div>
 	<form action="updateboard.do" method="POST" id="insertForm" onsubmit="checkData();">
 	<!-- 제목 -->
 		<div style="display : flex; margin-top: 20px; margin-right: 30px;">
