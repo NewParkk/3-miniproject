@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../../header.jsp" %>
+<%@ include file="../common/header.jsp" %>
 
 <div class="container mt20">
 	<div style="margin-bottom: 35px;">
@@ -39,4 +39,4 @@ function checkData() {
 
 </script>
 	
-<%@ include file="../../footer.jsp" %>
+<%@ include file="../common/footer.jsp" %>
