@@ -23,6 +23,8 @@ public class GetBoardController extends HttpServlet {
 //		System.out.println(noticeId);
 		NoticeBoardDTO board = null;
 		
+		System.out.println("여기 들어오나요~?");
+		
 		try {
 			board = BoardDAO.getBoardByBoardId(noticeId);
 			if (board != null) {

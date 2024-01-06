@@ -7,10 +7,11 @@
 		<span style="width: 10%;">  </span>
 		<h2 style="display: inline;">메인게시판</h2><hr/>
 	</div>
-	<form action="updateboard.do" method="POST" id="insertForm" onsubmit="checkData();">
+	<form action="updateform.do" method="POST" id="insertForm" onsubmit="checkData();">
+	<input type="hidden" name="noticeid" value="${requestScope.board.noticeId}">
 	<!-- 제목 -->
 		<div style="display : flex; margin-top: 20px; margin-right: 30px;">
-			<input type="text" class="form-control" readonly value="${requestScope.board.noticeTitle}">
+			<input type="text" class="form-control" name="boardtitle" readonly value="${requestScope.board.noticeTitle}">
 		</div>
 		<!-- 내용 -->
 		<div style="display : flex; margin-top: 20px; margin-right: 30px;">

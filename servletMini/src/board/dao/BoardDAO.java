@@ -191,7 +191,35 @@ public class BoardDAO {
 		}
 		
 		
-		
+		public static boolean updateBoard(NoticeBoardDTO noticeboard) throws SQLException {
+		    Connection con = null;
+		    PreparedStatement pstmt = null;
+		    int result = 0;
+
+		    String sql = "UPDATE notice_board SET notice_title = ?, notice_content = ?, notice_date = current_timestamp WHERE notice_id = ?";
+
+		    try {
+		        con = DBUtil.getConnection();
+		        
+		        pstmt = con.prepareStatement(sql);
+		        pstmt.setString(1, noticeboard.getNoticeTitle());
+		        pstmt.setString(2, noticeboard.getNoticeContent());
+		        pstmt.setInt(3, noticeboard.getNoticeId());
+		      
+		        
+		        
+		        result = pstmt.executeUpdate();
+		        
+		    
+		        	return result != 0;
+		        
+		    }finally {
+		        	DBUtil.close(pstmt, con);
+		        }
+		        
+
+		  
+		}
 
 	
 	
