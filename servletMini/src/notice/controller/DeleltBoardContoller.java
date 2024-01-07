@@ -24,7 +24,7 @@ public class DeleltBoardContoller extends HttpServlet {
 				result = BoardDAO.deleteBoardByUserId(userId);
 				
 				if(result) {
-					url = "main.jsp"; // 임시url 변경 필수!!
+					url = "getBoardList.do"; 
 					response.sendRedirect(url);
 				} else {
 					request.setAttribute("error", "존재하지 않는 게시글입니다");
