@@ -1,4 +1,4 @@
-package notice.controller;
+package board.controller;
 
 import java.io.IOException;
 
@@ -8,12 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/insertform.do")
-public class InsertFormController extends HttpServlet {
+@WebServlet("/updateform.do")
+public class UpdateFormContoller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "write.jsp";
+		String noticeid =  request.getParameter("noticeid");
+		String boardtitle = request.getParameter("boardtitle");
+		String boardcontent = request.getParameter("boardcontent");
+		
+		request.setAttribute("noticeid", noticeid);
+		request.setAttribute("boardtitle", boardtitle);
+		request.setAttribute("boardcontent", boardcontent);
+		
+		String url = "board/update.jsp";
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		request.getRequestDispatcher(url).forward(request, response);

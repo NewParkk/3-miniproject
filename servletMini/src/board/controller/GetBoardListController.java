@@ -1,4 +1,4 @@
-package notice.controller;
+package board.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -24,7 +24,7 @@ public class GetBoardListController extends HttpServlet {
 			if (boardList != null) {
 //				System.out.println(boardList);
 				request.setAttribute("boardList", boardList);
-				request.getRequestDispatcher("getBoardList.jsp").forward(request, response);
+				request.getRequestDispatcher("board/getBoardList.jsp").forward(request, response);
 			}else {
 				request.setAttribute("error", "글 목록을 불러올 수 없습니다.");
 				request.getRequestDispatcher("errors.jsp").forward(request, response);

@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../../header.jsp" %>
+<%@ include file="../common/header.jsp" %>
 
 <div class="container">
 	
-    <h2 style="width: 100%; text-align: left; margin-top: 20px;">게시판</h2>
+    <h2 style="width: 100%; text-align: left; margin-top: 20px;">메인게시판</h2><hr>
     
     <div class="row">
         <div class="table-responsive" style="width: 100%;">
@@ -19,7 +19,7 @@
                 <tbody>
                     <c:forEach var="board" items="${requestScope.boardList}">
                         <tr>
-                            <td class="col-1" style="text-align: center;">${board.noticeId}</td>
+                            <td class="col-1" style="text-align: center;">${board.boardNum}</td>
                             <td><a href="getboard.do?noticeId=${board.noticeId}">${board.noticeTitle}</a></td>
                             <td>${board.noticeDate}</td>
                             <td>${board.userId}</td>
@@ -35,4 +35,4 @@
     </div>
 </div>
 
-<%@ include file="../../footer.jsp" %>
+<%@ include file="../common/footer.jsp" %>
