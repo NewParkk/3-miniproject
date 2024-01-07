@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../insertUser.jsp" %>
+<%@ include file="insertUser.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +33,7 @@ body, html {height: 100%}
     <h1 class="w3-jumbo w3-animate-top", align="center" >WELCOME</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">로그인을 해주세요</p>
-    <form action="login.do" method="POST">
+    <form action="../login.do" method="POST">
 	<table align="center" cellpadding="5" cellspacing="1" width="600" border="1">
 	    <tr>
 	        <td width="1220" height="20" colspan="2" bgcolor="#336666">
@@ -67,6 +67,9 @@ body, html {height: 100%}
 	        			<!-- input 박스 -->
 	        			<input type="password" name="password" size="30">
 	        		</span>
+	        		<span>
+	        			<button id="check-userId" style="visibility: hidden;">check</button>
+	        		</span>
 	        	</b>
 	        </td>
 	    </tr>
@@ -77,6 +80,9 @@ body, html {height: 100%}
 	        <td width="450" height="20" align="center">
 	        	<b>
 	        		<span style="font-size:12pt;">
+	        			<!-- 로그인 버튼 -->
+						<button type="button" onclick="document.getElementById('id01').style.display='block'">회원가입</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;
 						<input type="submit" value="로그인">
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<input type="reset" value="다시작성">
@@ -89,8 +95,6 @@ body, html {height: 100%}
   </div>
 </div>
 
-</body>
-</html>
 
 <script>
 const checkBtn = document.getElementById('check-userId');
@@ -109,6 +113,8 @@ checkBtn.addEventListener('click', (e) => {
             	}
             })
 })
+
+
 
 </script>
 </body>

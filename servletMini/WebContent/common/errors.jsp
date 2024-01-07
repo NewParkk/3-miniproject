@@ -20,7 +20,7 @@
 	<br>
 	
 	<div align=center>
-		<span style="font-size:9pt;">&lt;<a href="http://localhost:8081/servletMini/login.jsp">로그인 화면으로</a>&gt;</span>
+		<span style="font-size:9pt;">&lt;<a href="getboardlist.do">목록으로</a>&gt;</span>
 	</div>
 </body>
 </html>

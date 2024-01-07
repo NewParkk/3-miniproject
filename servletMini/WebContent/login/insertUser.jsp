@@ -11,9 +11,6 @@
 <body>
 
 <div align="right" class="w3-container">
-  <!-- 로그인 버튼 -->
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-blue w3-large">회원가입</button>
-
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
   

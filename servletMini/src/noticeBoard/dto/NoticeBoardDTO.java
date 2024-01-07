@@ -6,10 +6,13 @@ public class NoticeBoardDTO {
 	private String noticeDate;
 	private String noticeContent;
 	private String userId;
+	private Integer boardNum;
 	
 	
 	
-	
+
+
+	public NoticeBoardDTO() {}
 	public NoticeBoardDTO(Integer noticeId, String noticeTitle, String noticeDate, String noticeContent,
 			String userId) {
 		super();
@@ -91,6 +94,14 @@ public class NoticeBoardDTO {
 	}
 
 
+	public Integer getboardNum() {
+		return boardNum;
+	}
+	
+	
+	public void setboardNum(Integer rownum) {
+		this.boardNum = rownum;
+	}
 
 
 	@Override
@@ -102,3 +113,4 @@ public class NoticeBoardDTO {
 	
 	
 }
+
