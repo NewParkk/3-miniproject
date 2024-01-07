@@ -12,6 +12,7 @@
 	</div>
 	<form action="updateform.do" method="POST" id="insertForm" onsubmit="checkData();">
 	<input type="hidden" name="noticeid" value="${requestScope.board.noticeId}">
+	<input type="hidden" name="userid" value="${requestScope.board.userId}">
 	<!-- 제목 -->
 		<div style="display : flex; margin-top: 20px; margin-right: 30px;">
 			<input type="text" class="form-control" name="boardtitle" readonly value="${requestScope.board.noticeTitle}">

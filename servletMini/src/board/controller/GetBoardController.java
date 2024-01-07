@@ -29,7 +29,7 @@ public class GetBoardController extends HttpServlet {
 			board = BoardDAO.getBoardByBoardId(noticeId);
 			if (board != null) {
 				request.setAttribute("board", board);
-				System.out.println(board.getNoticeContent());
+//				System.out.println(board.getNoticeContent());
 				
 				url = "board/getBoard.jsp";
 				

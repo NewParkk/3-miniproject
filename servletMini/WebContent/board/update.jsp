@@ -8,7 +8,7 @@
 		<h2 style="display: inline; margin-right: 20px">메인게시판</h2><h4 style="display: inline;">글수정</h4><hr/>
 	</div>
 	<form action="updateboard.do" method="POST" id="updateForm" onsubmit="checkData()">
-		<input type="hidden" name="test" value="${requestScope.test}">
+		<input type="hidden" name="userid" value="${requestScope.userId}">
 		<input type="hidden" name="noticeid" value="${requestScope.noticeid}">
 		<!-- 제목 -->
 		<div style="display : flex; margin-top: 20px;">

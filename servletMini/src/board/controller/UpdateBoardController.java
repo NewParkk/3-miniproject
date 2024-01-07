@@ -18,24 +18,24 @@ public class UpdateBoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
 		String noticetitle = request.getParameter("boardtitle");
 		String noticecontent = request.getParameter("boardcontent");
-		System.out.println(noticetitle);
-		System.out.println(noticecontent);
-		System.out.println(request.getParameter("noticeid"));
 		int noticeid = Integer.parseInt(request.getParameter("noticeid"));
-		
 		
 		HttpSession session = request.getSession();
 	    String userId = (String) session.getAttribute("userId");
 		
 		String url = "common/errors.jsp";
-		
+	
 //		System.out.println(noticetitle);
 //		System.out.println(noticecontent);
-		
 		boolean result = false;
+   
+
+        // Check if the session user ID matches the board user ID
+        
+		
+		
 		
 		if (noticetitle == null || noticetitle.equals("")) {
 			request.setAttribute("error", "제목을 입력해 주세요");
@@ -46,6 +46,7 @@ public class UpdateBoardController extends HttpServlet {
 			request.setAttribute("error", "내용을 입력해 주세요");
 			request.getRequestDispatcher(url).forward(request, response);
 		}
+		
 		
 		else {
 			

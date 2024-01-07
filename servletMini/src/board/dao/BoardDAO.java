@@ -216,18 +216,6 @@ public class BoardDAO {
 		    }finally {
 		        	DBUtil.close(pstmt, con);
 		        }
-		        
-
-		  
-		}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		     	  
+		}	
 }
