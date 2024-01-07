@@ -31,9 +31,9 @@ public class LoginController extends HttpServlet {
 			request.getRequestDispatcher(url).forward(request, response);
 		} else {
 		try {
-			System.out.println(userId);
+//			System.out.println(userId);
 			user = UserDAO.getUserByUserIdandPassword(userId, pw);
-			System.out.println(user);
+//			System.out.println(user);
 			
 			if (user == null) {
 				request.setAttribute("error", "아이디와 비밀번호가 맞지 않습니다.");

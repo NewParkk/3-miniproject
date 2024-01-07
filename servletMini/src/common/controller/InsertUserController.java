@@ -18,7 +18,7 @@ public class InsertUserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("인설트유저");
+//		System.out.println("인설트유저");
 		String url = "common/loginErrors.jsp";
 		String userId = request.getParameter("getId");
 		String userName = request.getParameter("userName");
@@ -26,9 +26,9 @@ public class InsertUserController extends HttpServlet {
 		
 		boolean result = false;
 		
-		System.out.println(userId);
-		System.out.println(userName);
-		System.out.println(password);
+//		System.out.println(userId);
+//		System.out.println(userName);
+//		System.out.println(password);
 		UserDTO user = new UserDTO(userId, userName, password);
 		
 		try {

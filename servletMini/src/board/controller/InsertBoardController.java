@@ -47,7 +47,7 @@ public class InsertBoardController extends HttpServlet {
 				
 				result = BoardDAO.insertBoard(noticetitle, noticecontent, userId);
 			
-				System.out.println(result);
+//				System.out.println(result);
 				
 				if (result) {
 					url = "getboardlist.do";

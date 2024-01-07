@@ -22,7 +22,7 @@ public class LoginFilter implements Filter {
 		HttpSession session = httpRequest.getSession(false); 	// 매핑된 세션객체를 리턴하는데 없으면 새로 생성해서 리턴. false 쓰면 세션을 새로 생성하지 X
 		
 		String path = httpRequest.getRequestURI();
-		System.out.println(path);
+//		System.out.println(path);
 		
 		if(!path.contains("/login.do")) {
 			if(session == null || session.getAttribute("userId") == null) {

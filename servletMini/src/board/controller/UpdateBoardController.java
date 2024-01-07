@@ -58,7 +58,7 @@ public class UpdateBoardController extends HttpServlet {
 				
 				result = BoardDAO.updateBoard(board);
 			
-				System.out.println(result);
+//				System.out.println(result);
 				
 				if (result) {
 					url = "board/getBoard.jsp";
