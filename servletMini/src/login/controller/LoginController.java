@@ -21,7 +21,8 @@ public class LoginController extends HttpServlet {
 		String pw = request.getParameter("password");
 		UserDTO user = null;
 		
-		String url = "errors.jsp";
+
+		String url = "common/loginErrors.jsp";
 		
 		if(userId == null || userId == "" ) {
 			request.setAttribute("error", "아이디를 재확인해주세요");
@@ -31,9 +32,9 @@ public class LoginController extends HttpServlet {
 			request.getRequestDispatcher(url).forward(request, response);
 		} else {
 		try {
-			System.out.println(userId);
+//			System.out.println(userId);
 			user = UserDAO.getUserByUserIdandPassword(userId, pw);
-			System.out.println(user);
+//			System.out.println(user);
 			
 			if (user == null) {
 				request.setAttribute("error", "아이디와 비밀번호가 맞지 않습니다.");

@@ -19,7 +19,7 @@ public class DeleltBoardContoller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "errors.jsp";
+		String url = "common/errors.jsp";
 		String noticeId = request.getParameter("noticeId");
 		HttpSession session = request.getSession();
 		NoticeBoardDTO board = null;

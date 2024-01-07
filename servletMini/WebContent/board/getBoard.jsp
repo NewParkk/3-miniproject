@@ -7,8 +7,12 @@
 		<span style="width: 10%;">  </span>
 		<h2 style="display: inline;">메인게시판</h2><hr/>
 	</div>
+	<div style="margin-right: 5%;">
+			<p style="float; text-align: right">작성자 : ${requestScope.board.userId} / 작성일 : ${requestScope.board.noticeDate}<p/>
+	</div>
 	<form action="updateform.do" method="POST" id="insertForm" onsubmit="checkData();">
 	<input type="hidden" name="noticeid" value="${requestScope.board.noticeId}">
+	<input type="hidden" name="userid" value="${requestScope.board.userId}">
 	<!-- 제목 -->
 		<div style="display : flex; margin-top: 20px; margin-right: 30px;">
 			<input type="text" class="form-control" name="boardtitle" readonly value="${requestScope.board.noticeTitle}">

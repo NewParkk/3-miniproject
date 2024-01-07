@@ -50,8 +50,8 @@ public class UserDAO {
 			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, user.getUserId());
-			pstmt.setString(2, user.getPassword());
-			pstmt.setString(3, user.getUserName());
+			pstmt.setString(2, user.getUserName());
+			pstmt.setString(3, user.getPassword());
 			
 			result = pstmt.executeUpdate();
 			if(result != 0) {

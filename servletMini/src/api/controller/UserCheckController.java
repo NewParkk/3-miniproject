@@ -27,7 +27,7 @@ public class UserCheckController extends HttpServlet {
       try {
     	 user = UserDAO.getUserByUserId(id);
          response.setContentType("application/json; charset=UTF-8");
-         System.out.println(user);
+//         System.out.println(user);
          out = response.getWriter();
          if (user == null) {
             out.print("{\"msg\" : \"존재\"}");

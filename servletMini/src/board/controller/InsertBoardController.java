@@ -24,7 +24,7 @@ public class InsertBoardController extends HttpServlet {
 		HttpSession session = request.getSession();
 	    String userId = (String) session.getAttribute("userId");
 		
-		String url = "errors.jsp";
+		String url = "common/errors.jsp";
 		
 //		System.out.println(noticetitle);
 //		System.out.println(noticecontent);
@@ -47,7 +47,7 @@ public class InsertBoardController extends HttpServlet {
 				
 				result = BoardDAO.insertBoard(noticetitle, noticecontent, userId);
 			
-				System.out.println(result);
+//				System.out.println(result);
 				
 				if (result) {
 					url = "getboardlist.do";

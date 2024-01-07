@@ -27,14 +27,14 @@ public class GetBoardListController extends HttpServlet {
 				request.getRequestDispatcher("board/getBoardList.jsp").forward(request, response);
 			}else {
 				request.setAttribute("error", "글 목록을 불러올 수 없습니다.");
-				request.getRequestDispatcher("errors.jsp").forward(request, response);
+				request.getRequestDispatcher("common/errors.jsp").forward(request, response);
 			}
 			
 
 		
 		} catch (SQLException e) {
 			request.setAttribute("error", "글 목록을 불러올 수 없습니다.");
-			request.getRequestDispatcher("errors.jsp").forward(request, response);
+			request.getRequestDispatcher("common/errors.jsp").forward(request, response);
 		}
 	
 		
