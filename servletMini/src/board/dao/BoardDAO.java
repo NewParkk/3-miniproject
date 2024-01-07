@@ -133,18 +133,18 @@ public class BoardDAO {
 		
 	
 	// deleteBoard  (글 삭제)
-		public static boolean deleteBoardByUserId(String user_id) throws SQLException {
+		public static boolean deleteBoardByBoardId(String notice_id) throws SQLException {
 			Connection con = null;
 			PreparedStatement pstmt = null;
 			int result = 0;
 				
-			String sql = "DELETE FROM notice_board WHERE user_id = ?";
+			String sql = "DELETE FROM notice_board WHERE notice_id = ?";
 				
 			try {
 				con = DBUtil.getConnection();
 				pstmt = con.prepareStatement(sql);
 					
-				pstmt.setString(1, user_id);
+				pstmt.setString(1, notice_id);
 					
 				result = pstmt.executeUpdate();
 					

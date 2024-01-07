@@ -27,15 +27,13 @@
           <label><b>YourName</b></label>
           <input class="w3-input w3-border" type="text" placeholder="Your Name" name="userName" required>
           <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">회원가입</button>
-          <span><input type="reset" class="w3-button w3-green value="초기화"></span>
-          
+	      <div align="left" class="w3-container w3-border-top w3-padding-16 w3-white">
+	        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-green">Cancel</button>
+	          <span align="right" style="float: right;"><input type="reset" class="w3-button w3-green value="초기화"></span>
+	      </div>
         </div>
       </form>
 
-      <div align="left" class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-        <button  onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-green">Cancel</button>
-        <span class="w3-right w3-padding w3-hide-small"> <a href="login.jsp">로그인</a></span>
-      </div>
 
     </div>
   </div>

@@ -38,7 +38,7 @@ function goToBoardList() {
     location.href = 'getboardlist.do';
   }
 function goTodelete() {
-    location.href = 'deleteboard.do';
+    location.href='deleteboard.do?noticeId=${board.noticeId}';
   }
 </script>
 	
