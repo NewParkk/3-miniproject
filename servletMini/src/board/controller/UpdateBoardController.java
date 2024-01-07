@@ -30,7 +30,7 @@ public class UpdateBoardController extends HttpServlet {
 		HttpSession session = request.getSession();
 	    String userId = (String) session.getAttribute("userId");
 		
-		String url = "errors.jsp";
+		String url = "common/errors.jsp";
 		
 //		System.out.println(noticetitle);
 //		System.out.println(noticecontent);

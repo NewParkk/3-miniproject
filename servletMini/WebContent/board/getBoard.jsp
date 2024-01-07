@@ -7,6 +7,9 @@
 		<span style="width: 10%;">  </span>
 		<h2 style="display: inline;">메인게시판</h2><hr/>
 	</div>
+	<div style="margin-right: 5%;">
+			<p style="float; text-align: right">작성자 : ${requestScope.board.userId} / 작성일 : ${requestScope.board.noticeDate}<p/>
+	</div>
 	<form action="updateform.do" method="POST" id="insertForm" onsubmit="checkData();">
 	<input type="hidden" name="noticeid" value="${requestScope.board.noticeId}">
 	<!-- 제목 -->

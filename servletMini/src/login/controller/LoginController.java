@@ -21,7 +21,7 @@ public class LoginController extends HttpServlet {
 		String pw = request.getParameter("password");
 		UserDTO user = null;
 		
-		String url = "errors.jsp";
+		String url = "common/loginErrors.jsp";
 		
 		if(userId == null || userId == "" ) {
 			request.setAttribute("error", "아이디를 재확인해주세요");

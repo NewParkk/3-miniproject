@@ -18,7 +18,8 @@ public class InsertUserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "login.errors.jsp";
+		System.out.println("인설트유저");
+		String url = "common/loginErrors.jsp";
 		String userId = request.getParameter("getId");
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
@@ -33,7 +34,7 @@ public class InsertUserController extends HttpServlet {
 		try {
 			result = UserDAO.insertUser(user);
 			if(result) {
-				url = "login.jsp";
+				url = "login/login.jsp";
 				response.sendRedirect(url);
 				return;
 			} else {
