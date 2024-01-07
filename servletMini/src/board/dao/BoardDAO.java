@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
-
+ 
 import common.util.DBUtil;
 import noticeBoard.dto.NoticeBoardDTO;
 
