@@ -7,7 +7,9 @@ db구성 : mysql noticeBoard(notice_id, notice_title, notice_date, notice_conten
 형상관리 : sourcetree
 
 기능 :
-- 로그인(LoginController)) : ID가 존재하는지 확인하며 로그인 기능 구현. 세션에 ID값을 저장하여 화면 이동시 세션 정보 유지
+- 로그인(LoginController) : ID가 존재하는지 확인하며 로그인 기능 구현. 세션에 ID값을 저장하여 화면 이동시 세션 정보 유지
+
+- 로그아웃(LogoutController) : 로그아웃시 세션 종료. 로그인 화면으로 이동
 
 - 회원가입(InsertUserController) : ID가 존재하는지 확인하여 DB에 (아이디, 비밀번호, 이름)을 저장
 
@@ -35,7 +37,6 @@ db구성 : mysql noticeBoard(notice_id, notice_title, notice_date, notice_conten
 2. 게시글 입력시 비밀번호를 추가하여 저장 후 삭제 시 비밀번호를 체크하는 기능을 구현
 3. 게시글 목록 페이징처리
 4. 제목, 내용 검색기능
-5. 로그아웃 세션처리  (현재 로그아웃 기능은 로그인 페이지로 넘기는 방식으로 구현)
 
 
 

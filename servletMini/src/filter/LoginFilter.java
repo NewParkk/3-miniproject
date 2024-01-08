@@ -26,7 +26,7 @@ public class LoginFilter implements Filter {
 		
 		if(!path.contains("/login.do")) {
 			if(session == null || session.getAttribute("userId") == null) {
-				httpResponse.sendRedirect("login.jsp");
+				httpResponse.sendRedirect("login/login.jsp");
 				return;
 			} 
 		}

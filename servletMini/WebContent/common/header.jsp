@@ -68,9 +68,9 @@
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-					aria-expanded="false"> 회원관리 </a>
+					aria-expanded="false"> ${ userId } 님 </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="login/login.jsp" style="color: #000">로그아웃	</a> 
+						<a class="dropdown-item" href="logout.do" style="color: #000">로그아웃	</a> 
 					</div>
 				</li>
 			</ul>
