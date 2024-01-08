@@ -19,7 +19,7 @@
 		</div>
 		<!-- 내용 -->
 		<div style="display : flex; margin-top: 20px; margin-right: 30px;">
-			<textarea class="form-control" style="height: 300px;" readonly name="boardcontent">${requestScope.board.noticeContent}</textarea>
+			<textarea class="form-control" style="height: 390px;" readonly name="boardcontent">${requestScope.board.noticeContent}</textarea>
 		</div>
 		<!-- 버튼 -->
 		<div style="width: 100%; text-align: right; margin-top: 20px;">

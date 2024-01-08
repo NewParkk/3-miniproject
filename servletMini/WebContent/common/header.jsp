@@ -35,6 +35,11 @@
 	#header_nav a {
 		color : #fff;
 	}
+	 	textarea {
+		    border: none;
+		    resize: none;
+  	}
+	
 	
 </style>
 

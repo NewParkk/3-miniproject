@@ -18,7 +18,7 @@
 		<!-- 내용 -->
 		<div style="display : flex; margin-top: 20px;">
 			<!-- <p style="width: 10%;">내용<b><span style="color: red;">*</span></b></p> -->
-			<textarea class="form-control" style="height: 300px;" name="boardcontent" placeholder="내용을 입력하세요.">${requestScope.boardcontent}</textarea>
+			<textarea class="form-control" style="height: 390px;" name="boardcontent" placeholder="내용을 입력하세요.">${requestScope.boardcontent}</textarea>
 		</div>
 		<!-- 버튼 -->
 		<div style="width: 100%; text-align: right; margin-top: 20px;">
